@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "open_cypress":"$(npm bin)/cypress open"
+    "open_cypress": "$(npm bin)/cypress open"
   },
   "author": "Harshavardhan Thorat",
   "license": "ISC",

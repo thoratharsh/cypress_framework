@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 import LoginPage from "../pageObjects/loginPage.js"
- 
+
 describe("Home page test cases", () => {
 
     beforeEach(() => {
@@ -15,6 +15,16 @@ describe("Home page test cases", () => {
             .should("have.class", "firstLevelMenu")
 
         cy.get("a#menu_pim_viewPimModule").should("be.visible", "have.class")
+
+        cy.get("#menu_pim_viewPimModule").should("be.visible").should("have.text","PIM")
+
+        cy.get("#menu_leave_viewLeaveModule").should("be.visible").should("have.text","Leave")
+       
+        cy.get("#menu_time_viewTimeModule").should("be.visible").should("have.text","Time")
+
+        cy.get("#menu_recruitment_viewRecruitmentModule").should("be.visible").should("have.text","Recruitment")
+
+
     })
 
 })

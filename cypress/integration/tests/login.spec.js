@@ -34,5 +34,17 @@ describe('Actions', () => {
         cy.get("span#spanMessage").should("have.text","Invalid credentials")
     })
 
+    it("Should able to logout from crm", () => {
+
+      cy.login("Admin", "admin123")
+      
+      cy.get("#welcome").should("be.visible").should("have.text","Welcome Admin").click()
+
+      cy.get("#welcome-menu > ul > li:nth-child(2) > a").should("be.visible").click()
+
+      cy.get("#txtUsername").should("be.visible")
+
+  })
+
   })
   
